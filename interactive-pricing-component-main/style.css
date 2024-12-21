@@ -1,0 +1,52 @@
+
+body{
+margin:20px ;
+background-color: hsl(230, 100%, 99%);
+font-family: Arial, sans-serif;
+}
+input[type="range"] {
+    width: 25%;
+}
+.switch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Hide the default checkbox */
+  .switch-input {
+    display: none;
+  }
+  
+  /* Custom switch label */
+  .switch-label {
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Circle inside the switch */
+  .switch-label::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.9s ease;
+  }
+  
+  /* When the checkbox is checked, change background and move the circle */
+  .switch-input:checked + .switch-label {
+    background-color:blue;
+  }
+  
+  .switch-input:checked + .switch-label::after {
+    transform: translateX(30px);
+  }
